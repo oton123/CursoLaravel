@@ -7,10 +7,13 @@ use Illuminate\Http\Request;
 class TesteController extends Controller
 {
     public function index(){
-        $teste = 
-            '1';'2'
-            ($teste);
-        }
+        return view('Clients/index');
 
+        for($x = 1;$x <=10;$x++){
+                $y = $x .'  -  '. $x;
+        }
+        return $y;
     }
+
+
 }
