@@ -5,28 +5,36 @@
 @endpush
 @section('conteudo')
 
- <form action=''>
-   <div style='trext-align:center;'>
-    <center>
-    <h1> Formulário para preenchimento </h1>
-      <label>
-        Nome: 
-       </label>
-       <input></input><p> </p> <label>
-           CPF:
-       </label>  <input class='cpf-mask'> </input> <p> </p>
-       <label>
-           Endereço:
-       </label><input></input> <p></p>  
+<a class='btn btn-sucess'> Enviar </a>
 
-     </div>  
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Cpf</th>
+      <th scope="col">Email</th>
+      <th scope='col'>acoes</th>
+    </tr>
+  </thead>
+  <tbody>
+       @foreach($clients as $client)
+    <tr>
+      <th scope="row">1</th>
+      <td>{{$client->name}}</td>
+      <td>{{$client->cpf}}</td>
+      <td>{{$client->email}}</td>
+      <td>{{$client->acoes}}</td>
+      <td>
+        <a class='btn btn-primary'> Editar </a>
+        <a class='btn btn-danger'> Excluir </a>
+      </td>
+    </tr>
+      @endforeach
     
-     <div style='text-align:center;'>
-          <input type='submit' class="btn btn-primary";>
-     </div>         
-       
-     </center>
-  </form>  
+  </tbody>
+</table>
+
   @endsection
   @push('scripts')
  
