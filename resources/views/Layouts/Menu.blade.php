@@ -45,11 +45,18 @@
             <!-- Navigation -->
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="http://senaicurso.com.br">
+                    <a class="nav-link" href="/CursoLaravel/public">
                         <i class="nav-icon fa fa-th-large text-gray"></i> Painel
                     </a>
                 </li>
             </ul>
+ <!-- Navigation -->
+ <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{route('client.index')}}">
+                        <i class="nav-icon fa fa-user text-green"></i> Clientes
+                    </a>
+                </li>
         </div>
     </div>
 </nav>
@@ -58,3 +65,5 @@
 {{--</nav>--}}
 {{--<button class="sidebar-minimizer brand-minimizer" type="button"></button>--}}
 {{--</div>--}}
+
+

@@ -19,7 +19,7 @@ class CreateClientTable extends Migration
             $table->string('email');
             $table->string('endereco')->nullable();
             $table->boolean('active_flag')->default(true);
-            $table->integer('cpf');
+            $table->bigInteger('cpf');
             $table->timestamps();
         });
     }

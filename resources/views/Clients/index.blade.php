@@ -3,9 +3,15 @@
 @push('css')
 
 @endpush
+@if(Session::has('success'))
+             toastr["success"]("<b>SUCESSO: </b><br>
+             {{ Session::get('success') }}"); 
+@endif   
 @section('conteudo')
 
-<a class='btn btn-sucess'> Enviar </a>
+<a class='btn btn-sucess' href ="{{route('client.create')}}"> 
+Adicionar
+</a>
 
 <table class="table">
   <thead>

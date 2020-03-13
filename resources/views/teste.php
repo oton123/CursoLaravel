@@ -18,7 +18,7 @@
        <label>
            Endereço:
        </label><input></input> <p></p>  
-       <button> Enviar </button>
+       <button> Adicionar </button>
      </div>  
 
      <div style='text-align:center;'>

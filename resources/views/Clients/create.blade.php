@@ -2,27 +2,52 @@
 
 @push('css')
 
-@endpush
+@endpush             
 @section('conteudo')
-
- <form action=''>
-   <div style='trext-align:center;'>
+@if($errors->any())
+  <div class="alert alert-danger">
+    <ul>
+       @foreach ($errors->all() as $error)
+          <li>{{ $error }}</li>
+       @endforeach
+    </ul>
+  </div>
+  @endif
+ <form method="POST" action="{{route('client.store') }}"
+                    class="form-horizontral form-validate">
+                  {{csrf_field() }}
     <center>
     <h1> Formulário para preenchimento </h1>
+    <div style='text-align:center;'>
+
+      <div>
       <label>
+       Ativo?
+       </label>
+       <input id='activebox' name='activebox'  type='checkbox' value='{{old("activebox")}}'>
+       <br>
         Nome: 
        </label>
-       <input></input><p> </p> <label>
+       <input id='name' name='name' type='text' value='{{old("name")}}'>
+       </input><p> </p> <label>
            CPF:
-       </label>  <input class='cpf-mask'> </input> <p> </p>
+       </label>  <input id='cpf'  name='cpf'  type ='text' value='{{old("cpf")}}'
+       class='cpf-mask'> </input> <p> </p>
+
        <label>
            Endereço:
-       </label><input></input> <p></p>  
+       </label>
+       <input id='Endereco'  name='Endereco'   type='text' value='{{old("Endereco")}}'>            >
+        <p></p>  
+       <label>
+       Email:
+       </label>
+       <input id='email'  name='email'  type='text' value=''>
+       <p> </p>
 
      </div>  
     
-     <div style='text-align:center;'>
-          <input type='submit' class="btn btn-primary";>
+          <button type='submit' class="btn btn-success">Cadastrar</button>
      </div>         
        
      </center>
