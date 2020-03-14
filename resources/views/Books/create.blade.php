@@ -22,7 +22,7 @@
 
       <div>
       <label>
-       Ativo?
+       
        </label>
        <input id='activebox' name='activebox'  type='checkbox' value='{{old("activebox")}}'>
        <br>
@@ -30,17 +30,16 @@
        </label>
        <input id='name' name='name' type='text' value='{{old("name")}}'>
        </input><p> </p> <label>
-           CPF:
-       </label>  <input id='cpf'  name='cpf'  type ='text' value='{{old("cpf")}}'
-       class='cpf-mask'> </input> <p> </p>
+         Writer:
+       </label>  <input id='writer'  name='writer'  type ='text' value='{{old("writer")}}'
+       > </input> <p> </p>
 
        <label>
-           Endereço:
+           Page Number:
        </label>
-       <input id='Endereco'  name='Endereco'   type='text' value='{{old("Endereco")}}'>            >
+       <input id='page number'  name='page number'   type='integer' value='{{old("page_number")}}'>            
         <p></p>  
-       
-
+     
      </div>  
     
           <button type='submit' class="btn btn-success">Cadastrar</button>
@@ -59,6 +58,3 @@
 
 
 @endpush
-
-
-
